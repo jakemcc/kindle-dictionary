@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
+    <metadata>
+        <dc:title>Dune Terms</dc:title>
+        <dc:creator opf:role="aut">Frank Herbert</dc:creator>
+        <dc:identifier>11122333222111</dc:identifier>
+        <dc:language>en-us</dc:language>
+        <meta name="cover" content="my-cover-image" />
+        <x-metadata>
+            <DictionaryInLanguage>en-us</DictionaryInLanguage>
+            <DictionaryOutLanguage>en-us</DictionaryOutLanguage>
+            <DefaultLookupIndex>default</DefaultLookupIndex>
+        </x-metadata>
+    </metadata>
+    <manifest>
+        <item href="MyCoverImage.png" id="my-cover-image" media-type="image/png" />
+        <item id="content"
+              href="content.html"
+              media-type="application/xhtml+xml"
+              fallback-style="css1"/>
+        <item id="css1"
+              href="style.css"
+              media-type="text/css" />
+    </manifest>
+    <spine>
+        <itemref idref="content"/>
+    </spine>
+    <guide>
+        <reference type="index" title="IndexName" href="content.html"/>
+    </guide>
+</package>
