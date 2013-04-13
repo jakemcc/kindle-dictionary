@@ -5,8 +5,8 @@
 (defn define [{:keys [entry definition]}]
   [:div.definition
    [:idx:entry {:name "default"}
-    [:h2 [:idx:orth entry]]
-    definition]])
+    [:h2 [:dt [:idx:orth entry]]]
+    [:dd definition]]])
 
 (def ^:dynamic sample-words
   [{:entry "zzzz" :definition "snoring sound"}
@@ -23,9 +23,11 @@
           [:meta {:http-equiv "content-type"
                   :content "text/html"}]]
          [:body
-          (map define (sort-by :entry
-                               (fn [x y] (.compareToIgnoreCase x y))
-                               words))]))
+          [:dl
+           (interpose [:hr]
+                      (map define (sort-by :entry
+                                           (fn [x y] (.compareToIgnoreCase x y))
+                                           words)))]]))
 
 (def dune-words
   [
