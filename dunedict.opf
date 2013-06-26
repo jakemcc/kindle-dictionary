@@ -2,7 +2,7 @@
 <package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
   <metadata>
     <dc:title>Dune Dictionary</dc:title>
-    <dc:creator opf:role="aut">Jake Allen</dc:creator>
+    <dc:creator opf:role="aut">Jake McCrary</dc:creator>
     <dc:identifier>11122333222111</dc:identifier>
     <dc:language>en-us</dc:language>
     <meta name="cover" content="my-cover-image" />
@@ -13,7 +13,7 @@
     </x-metadata>
   </metadata>
   <manifest>
-    <item href="MyCoverImage.png" id="my-cover-image"
+    <item href="cover.png" id="my-cover-image"
           media-type="image/png" />
     <item id="cover"
           href="cover.html"
