@@ -13,8 +13,8 @@
     </x-metadata>
   </metadata>
   <manifest>
-    <item href="cover.png" id="my-cover-image"
-          media-type="image/png" />
+    <item href="cover.jpg" id="my-cover-image"
+          media-type="image/jpg" />
     <item id="cover"
           href="cover.html"
           media-type="application/xhtml+xml"
