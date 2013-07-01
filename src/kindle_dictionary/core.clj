@@ -8,16 +8,8 @@
     [:h2 [:dt [:idx:orth entry]]]
     [:dd definition]]])
 
-(def ^:dynamic sample-words
-  [{:entry "zzzz" :definition "snoring sound"}
-   {:entry "fighter"
-    :definition "someone with a sword"}
-   {:entry "chair"
-    :definition "You sit in this"}
-   {:entry "Gesserit-Guild"
-    :definition (str "Secret guild " (rand-int 100))}])
-
-(defn generate-document [words]
+(defn generic-headers
+  [body]
   (html4 [:head
           (include-css "style.css")
           [:meta {:http-equiv "content-type"
@@ -29,10 +21,37 @@
                                            (fn [x y] (.compareToIgnoreCase x y))
                                            words)))]]))
 
+(defn generate-word-list
+  [words]
+  (generic-headers
+   [:body
+    [:dl
+     (interpose [:hr]
+                (map define (sort-by :entry
+                                     (fn [x y] (.compareToIgnoreCase x y))
+                                     words)))]]))
+
+(defn cover-page
+  [book]
+  (generic-headers
+   [:body
+    [:h1 (:title book)]
+    [:h3 "Created by " (:creator book)]]))
+
 (declare dune-words)
 
+(defn output-book
+  [book]
+  (spit "cover.html" (cover-page book))
+  (spit "content.html" generate-word-list (:words book)))
+
 (defn make-dune-dictionary []
-  (spit "content.html" (generate-document dune-words)))
+  (spit "content.html" (generate-word-list dune-words)))
+
+(def dune-dictionary
+  {:title "Dune Dictionary"
+   :creator "Jake McCrary"
+   :words dune-words})
 
 (def dune-words
   [
