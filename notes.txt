@@ -1,0 +1,8 @@
+If the dictionary does not have a the cover meta data then it fails as
+a dictionary. Actually breaks using your other dictionaries as well.
+
+Newlines mean nothing when looking up a word. Probably need to
+actually put in line breaks.
+
+When looking up partial1 the kindle actually looks up partial. This
+causes it to not find partial1 in the functional javascript companion.
