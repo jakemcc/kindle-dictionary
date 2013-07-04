@@ -1,12 +1,25 @@
 (ns kindle-dictionary.core
   (:require [hiccup.core :refer [html]]
-            [hiccup.page :refer [html4 include-css]]))
+            [hiccup.page :refer [html4 include-css]]
+            [clojure.string :as str]
+            )
+  (:refer-clojure :exclude [format]))
+
+(defmulti format type)
+
+(defmethod format clojure.lang.PersistentVector
+  [definition]
+  [:pre (interpose [:br] definition)])
+
+(defmethod format :default
+  [definition]
+  definition)
 
 (defn define [{:keys [entry definition]}]
   [:div.definition
    [:idx:entry {:name "default"}
     [:h2 [:dt [:idx:orth entry]]]
-    [:dd definition]]])
+    [:dd (format definition)]]])
 
 (defn generic-headers
   [body]
@@ -14,12 +27,7 @@
           (include-css "style.css")
           [:meta {:http-equiv "content-type"
                   :content "text/html"}]]
-         [:body
-          [:dl
-           (interpose [:hr]
-                      (map define (sort-by :entry
-                                           (fn [x y] (.compareToIgnoreCase x y))
-                                           words)))]]))
+         body))
 
 (defn generate-word-list
   [words]
@@ -43,15 +51,11 @@
 (defn output-book
   [book]
   (spit "cover.html" (cover-page book))
-  (spit "content.html" generate-word-list (:words book)))
+  (spit "content.html" (generate-word-list (:words book))))
 
 (defn make-dune-dictionary []
   (spit "content.html" (generate-word-list dune-words)))
 
-(def dune-dictionary
-  {:title "Dune Dictionary"
-   :creator "Jake McCrary"
-   :words dune-words})
 
 (def dune-words
   [
@@ -215,3 +219,8 @@
    { :entry "Yali" :definition "A Fremen's personal quarters within the sietch." }
    { :entry "Zensunni" :definition "Ancient religious sect, ancestors of the Fremen. (See also Zen Buddhism and Sunni Islam.)" }
    ])
+
+(def dune-dictionary
+  {:title "Dune Dictionary"
+   :creator "Jake McCrary"
+   :words dune-words})
