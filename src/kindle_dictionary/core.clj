@@ -15,10 +15,22 @@
   [definition]
   definition)
 
+(defn remove-numbers
+  [word]
+  (second (re-find #"(.*)\d+$" word)))
+
+(defn format-word
+  [word]
+  (if-let [other-form (remove-numbers word)]
+    [:idx:orth word
+     [:idx:infl
+      [:idx:iform {:value other-form}]]]
+    [:idx:orth word]))
+
 (defn define [{:keys [entry definition]}]
   [:div.definition
    [:idx:entry {:name "default"}
-    [:h2 [:dt [:idx:orth entry]]]
+    [:dt (format-word entry)]
     [:dd (format definition)]]])
 
 (defn generic-headers
