@@ -1,8 +1,7 @@
 (ns kindle-dictionary.core
   (:require [hiccup.core :refer [html]]
             [hiccup.page :refer [html4 include-css]]
-            [clojure.string :as str]
-            )
+            [clojure.string :as str])
   (:refer-clojure :exclude [format]))
 
 (defmulti format type)
