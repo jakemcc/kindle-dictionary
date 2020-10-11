@@ -1,0 +1,195 @@
+[{:entry "address",
+  :definition
+  "A string of bits that specifies a source or destination for data, such as a file in a library, a camera on a satellite, or a location in a scape. Different addresses can be of different lengths, and the same data can have multiple addresses."}
+ {:entry "boson",
+  :definition
+  "All elementary particles can be classified as either bosons or fermions ; the bosons include photons and gluons. The quantum wave function for two or more identical bosons is unchanged if any two particles are swapped, and the wave function for a single boson is unchanged if the particle is rotated by 360 degrees. Bosons have a spin which is an integer multiple of the fundamental unit of angular momentum. In Kozuch Theory, all these properties arise from the topology of the particle’s wormhole."}
+ {:entry "citizen",
+  :definition
+  "Conscious software which has been granted a set of inalienable rights in a particular polis. These rights vary from polis to polis, but always include inviolability, a pro rata share of processing power, and unimpeded access to public data."}
+ {:entry "Coalition of Polises",
+  :definition
+  "(1) The community of all polis citizens. (2) The physical computer network which comprises all polises."}
+ {:entry "CST",
+  :definition
+  "Coalition Standard Time. A system of specifying internal time used across the Coalition of Polises. CST is measured in “tau” elapsed since the system was adopted on 1 January 2065 UTC ; the equivalent in real time of 1 tau varies as polis hardware is improved."}
+ {:entry "cypherclerk",
+  :definition
+  "A structure within Konishi citizens which handles encryption and decryption tasks, including the authentication of claims of identity. See also signature."}
+ {:entry "delta",
+  :definition
+  "The base unit of all scape addresses. The usual height for a citizen’s icon is two delta. Multiples and fractions of a delta can be specified, and there is no universal smallest or largest distance. Plural: delta."}
+ {:entry "dream ape",
+  :definition
+  "A biological descendant of a group of exuberants who engineered-out their own language facilities."}
+ {:entry "embedding",
+  :definition
+  "A way of fitting one manifold into another, larger one as an aid to visualizing its properties. For example, some 2-dimensional manifolds can be embedded as a surface in 3-dimensional Euclidean space (a sphere, a torus, a Möbius strip), while others (such as Klein’s bottle) can only be embedded in 4-dimensional space. The size and shape of the surface are properties of the embedding, not of the manifold itself – so a sphere and an ellipsoid are two different embeddings of exactly the same manifold – but a particular embedding in Euclidean space can be used to supplement a manifold with the geometrical concepts needed to make it into a Riemannian space."}
+ {:entry "Euclidean space",
+  :definition
+  "The Euclidean space of N dimensions is a natural generalization of the 2-dimensional Euclidean plane, where the square of the total distance between two points is the sum of the squares of their separation in each of the N dimensions. The Euclidean spaces are simple examples of the more general idea of a Riemannian space."}
+ {:entry "exoself",
+  :definition
+  "Non-conscious software that mediates between a citizen and the polis operating system."}
+ {:entry "exuberant",
+  :definition "A flesher whose genes have been modified."}
+ {:entry "fermion",
+  :definition
+  "All elementary particles can be classified as either bosons or fermions ; the fermions include electrons and quarks, and composites of three quarks like protons and neutrons. The quantum wave function for two or more identical fermions reverses phase if any two particles are swapped; this leads to the Pauli exclusion principle, which gives a zero probability for two fermions being in exactly the same state. The wave function of a single fermion reverses phase if the particle is rotated by 360 degrees, and is only restored exactly by two full rotations. Fermions have a spin which is an odd-integer multiple of half the fundamental unit of angular momentum. In Kozuch Theory, all these properties arise from the topology of the particle’s wormhole."}
+ {:entry "fiber bundle",
+  :definition
+  "A fiber bundle is a manifold (the “total space”) plus some scheme for projecting it onto a second manifold of lower dimension (the “base space”). For example, the surface of a torus is a two-dimensional manifold, but if every longitudinal circle is reduced to a point, that projects the torus onto a single, equatorial circle, a one-dimensional manifold. The set of points in the total space that is projected onto any given point of the base space is called the “fiber” of that point (e.g. one of the longitudinal circles of the torus). The fibers need not be identical from point to point, but if they are, their general form is called the standard fiber of the bundle. So, a torus is a fiber bundle with a circle as its base space, and another circle as its standard fiber. In classical Kozuch Theory, the universe is a fiber bundle with four-dimensional space-time as its base space, and a six-dimensional sphere as its standard fiber."}
+ {:entry "field",
+  :definition
+  "A six-bit segment of a mind seed, comprising a single instruction code in the Shaper programming language."}
+ {:entry "first generation",
+  :definition
+  "Those citizens or gleisners who have been scanned from flesh, as opposed to those created by psychogenesis."}
+ {:entry "flesher",
+  :definition
+  "Any biological descendant of Homo sapiens. Those with genetic modifications are known as exuberants ; those with only natural genes are known as statics."}
+ {:entry "forum", :definition "A public scape."}
+ {:entry "geodesic",
+  :definition
+  "A path of zero intrinsic curvature in a Riemannian space. If the Riemannian space is a surface embedded in Euclidean space, the geodesics are either straight lines in the external space, or they curve in a direction perpendicular to the surface. For example, a great circle on a sphere is a geodesic – because so far as inhabitants of the sphere are concerned, a great circle is “curved” only in an abstract dimension which is perpendicular to the surface’s two dimensions."}
+ {:entry "gestalt",
+  :definition
+  "(1) A data format which encompasses both images, and “tags” conveying miscellaneous information. (2) A visual language based on inflections of flesher-shaped icons ; an enlarged version of pre-Introdus communication through facial expressions, gestures, etc."}
+ {:entry "gleisner",
+  :definition
+  "A conscious, flesher-shaped robot. Strictly speaking, gleisners and polis citizens are both conscious software (and gleisners will move their software to new bodies, if necessary, without considering themselves to have changed their identity). However, unlike polis citizens, gleisners attach great importance to being run on hardware which forces them to interact constantly with the physical world."}
+ {:entry "home born",
+  :definition
+  "Those citizens of a polis created by psychogenesis within that polis."}
+ {:entry "icon",
+  :definition
+  "A characteristic image, possibly accompanied by gestalt tags, identifying some piece of software, such as a citizen."}
+ {:entry "indeterminate field",
+  :definition
+  "In a mind seed, a field where only one instruction code has been tested, and the effects of any variation are unknown."}
+ {:entry "infotrope",
+  :definition
+  "A structure within Konishi citizens responsible for detecting complex, imperfectly understood patterns and coordinating attempts to make sense of them."}
+ {:entry "infrastructure field",
+  :definition
+  "In a mind seed, a field where one particular instruction code is known to be essential for successful psychogenesis."}
+ {:entry "input channel",
+  :definition
+  "A structure within Konishi citizens which receives data from other software."}
+ {:entry "input navigator",
+  :definition
+  "A structure within Konishi citizens which issues requests to the polis operating system for data to be provided to the citizen’s input channels from a particular address."}
+ {:entry "intrinsic curvature",
+  :definition
+  "In a Riemannian space, a measure of the extent to which tangents to a curve at two nearby points are not parallel to each other. If the Riemannian space is a surface embedded in Euclidean space, intrinsic curvature measures the amount of curvature which is “within” the surface, as opposed to being perpendicular to it."}
+ {:entry "Introdus",
+  :definition
+  "The mass influx of fleshers into the polises in the late twenty-first century."}
+ {:entry "invariant",
+  :definition
+  "An invariant of a mathematical structure is some characteristic which remains unchanged when the structure is transformed in certain ways. For example, the Euler number of a surface with no boundary (such as a sphere or a torus) is calculated by dividing the whole surface into (possibly curved) polygons, then adding up the number of polygons, minus the number of lines used to form them, plus the number of points where the lines meet. This is a “topological invariant” of the surface, because it remains the same however much the surface is bent or stretched."}
+ {:entry "inviolability",
+  :definition
+  "The protection of a citizen against alteration by any other software without explicit consent."}
+ {:entry "Kozuch Theory",
+  :definition
+  "A provisional unified theory of physics developed in the mid-twenty-first century. Kozuch Theory describes the universe as a ten-dimensional fiber bundle ; its size in six dimensions is sub-microscopic, so only the familiar four dimensions of space-time are immediately apparent. Particles such as electrons are actually the mouths of very narrow wormholes, an idea first suggested by the twentieth-century physicist John Wheeler. Renata Kozuch developed a model in which the properties of different particles are due to the different ways wormhole mouths can be connected in the six extra dimensions."}
+ {:entry "linear",
+  :definition
+  "(1) A data format derived from digitized sound. (2) A particular language which employs linear data, widely used in the Coalition of Polises."}
+ {:entry "manifold",
+  :definition
+  "A topological space with a definite dimension, but no geometrical properties. A 2-dimensional manifold is somewhat like a perfectly flexible sheet of rubber with zero thickness, and a 3-dimensional manifold is like a slab of the same material – with the possibility that parts of the border of this idealized “sheet” or “slab” have been joined to each other, perhaps in ways which would be physically impossible in three dimensions. Supplementing a manifold with concepts of distance and parallelism turn it into a Riemannian or semi-Riemannian space."}
+ {:entry "mind seed",
+  :definition
+  "A program to construct a polis citizen, written in the Shaper language. At the binary level, a mind seed is a string of approximately six billion bits."}
+ {:entry "N-sphere",
+  :definition
+  "An N-dimensional space without boundaries which can be embedded in (N+1)-dimensional Euclidean space as the surface (or hypersurface) equidistant from some point. For example, the surface of the Earth is a 2-sphere, and the hypersurface of a four-dimensional star or planet would be a 3-sphere, but the solid planets themselves in either dimension are not N-spheres in this sense."}
+ {:entry "outlook",
+  :definition
+  "A non-sentient program which runs inside the exoself, monitoring a citizen’s mind and adjusting it as necessary to maintain some chosen package of esthetics, values, etc."}
+ {:entry "output channel",
+  :definition
+  "A structure within Konishi citizens which provides data to other software."}
+ {:entry "output navigator",
+  :definition
+  "A structure within Konishi citizens which issues requests to the polis operating system to transfer data from the citizen’s output channels to a particular address."}
+ {:entry "penteract",
+  :definition
+  "A five-dimensional version of a cube. A three-dimensional cube has six square faces, twelve edges, and eight vertices. A five-dimensional penteract has ten tesseractic superfaces, forty cubic hyperfaces, eighty square faces, eighty edges, and thirty-two vertices."}
+ {:entry "Planck-Wheeler length",
+  :definition
+  "The length at which quantum uncertainty in the structure of space-time causes classical General Relativity to cease to apply, equal to about ten-to-the-minus-thirty-five meters, which is twenty orders of magnitude smaller than the size of atomic nuclei."}
+ {:entry "polis",
+  :definition
+  "(1) A computer or network of computers which functions as the infrastructure for a community of conscious software. (2) The community itself."}
+ {:entry "psychoblast",
+  :definition
+  "An embryonic software mind, prior to the granting of citizenship."}
+ {:entry "psychogenesis",
+  :definition
+  "The creation of a new citizen by running a mind seed, or by other methods such as the assembly and customization of pre-existing components."}
+ {:entry "Riemannian space",
+  :definition
+  "A Riemannian space is a manifold, with two added geometrical concepts: a metric, which is a means of computing the distance between two close points, and a connection, a means of deciding whether two directions at two close points are “parallel.” In the case of a surface embedded in Euclidean space, the distance between two close points in the manifold can be defined as the distance between them in the external space, and directions at two close points can be defined as “parallel” if any difference between them in the external space is perpendicular to the surface. For example, a horizontal compass needle pointing north at the equator is “parallel” in the Riemannian sense with one pointing north at a slightly higher latitude – because although they’re not pointing in exactly the same direction in 3-dimensional space, the difference in direction is perpendicular to the surface of the Earth."}
+ {:entry "rush",
+  :definition
+  "For a polis citizen, to rush is to experience the passage of time between external events more rapidly, by running vis own mind more slowly."}
+ {:entry "scanning",
+  :definition
+  "The process of comprehensively analyzing a particular living organism and creating a software simulation of all or part of it."}
+ {:entry "scape",
+  :definition
+  "A simulation of some physical or mathematical space, not necessarily 3-dimensional."}
+ {:entry "Schwarzschild radius",
+  :definition
+  "If an object is compressed to a size less than its Schwarzschild radius, then it will undergo gravitational collapse to form a black hole. The Schwarzschild radius is directly proportional to the mass of the object ; for the sun’s mass it is about three kilometers."}
+ {:entry "semi-Riemannian space",
+  :definition
+  "This is a generalization of a Riemannian space, where a distinction is made between events separated by “spacelike” and “timelike” distances. Space-time in General Relativity is a four-dimensional semi-Riemannian space."}
+ {:entry "Shaper",
+  :definition
+  "A programming language for building elaborate structures, such as conscious neural networks, by means of iterative methods abstracted from biological processes."}
+ {:entry "shaper",
+  :definition "A small subprogram within a Shaper program."}
+ {:entry "signature",
+  :definition
+  "The unique identifying bit string of each citizen in the Coalition of Polises. The full signature consists of public and private segments ; only the signature’s owner knows the private segment. Any citizen can use the public segment to encode a message that only the owner can decode."}
+ {:entry "snapshot",
+  :definition
+  "A file containing a complete description of a citizen, or a scanned flesher, not actually being run as a program and hence subjectively frozen, experiencing nothing."}
+ {:entry "sphere", :definition "See N-sphere."}
+ {:entry "standard fiber", :definition "See fiber bundle."}
+ {:entry "static", :definition "A flesher with no modified genes."}
+ {:entry "symbol",
+  :definition
+  "The representation within a mind of a complex concept or entity – such as a person, a class of objects, or an abstract idea."}
+ {:entry "tag",
+  :definition
+  "A packet of gestalt data used to convey miscellaneous non-visual information."}
+ {:entry "tau",
+  :definition
+  ["A unit of internal time, applicable across the Coalition of Polises. The equivalent in real time initially declined as polis hardware was improved, but stabilized around 2750 when the technology hit fundamental physical constraints. The subjective duration varies from citizen to citizen, depending on details of their minds’ architecture, but some rough citizen-flesher equivalents are given below. Plural: tau."
+   "Internal time / Subjective equivalent / Real time (after 2750)"
+   "1 tau / ~ 1 second / 1 millisecond"
+   "1 kilotau / ~ 15 minutes / 1 second"
+   "100 kilotau / ~ 1 day / 1 min 40 sec"
+   "1 megatau / ~ 10 days / 16 min 40 sec"
+   "1 gigatau / ~ 27 years / 11 days 14 hours"
+   "1 teratau / ~ 27,000 years / 32 years"]}
+ {:entry "tesseract",
+  :definition
+  "A four-dimensional version of a cube. A three-dimensional cube has six square faces, twelve edges, and eight vertices. A four-dimensional tesseract has eight cubic hyperfaces, twenty-four square faces, thirty-two edges, and sixteen vertices."}
+ {:entry "topological space",
+  :definition
+  "An abstract set of points, plus the bare minimum of additional structure required to determine the way in which they’re connected to each other: a collection of certain subsets of points, defined to be the “open sets” of the space. (In the Euclidean plane, the open sets are just the interiors of circles of any radius, or unions of any number of such circles.) A point P is called a “limit point” of a set U if every open set containing P also contains at least one point of U – implying that P is arbitrarily close to U, without necessarily belonging to it. (For example, any point on the border of a circle would be a limit point of its interior.) Then a set W is called connected if it can’t be divided into two pieces, U and V, such that V contains no limit points of U. (A figure-eight in the plane would be connected, but the interiors of the loops would not.)"}
+ {:entry "trait field",
+  :definition
+  "In a mind seed, a field where a number of different instruction codes are known to produce safe variations of some trait."}
+ {:entry "UTC",
+  :definition
+  "Universal Time Coordinated. Conventional astronomical/political system of specifying physical date and time, equivalent to local mean time at the Greenwich meridian. Universal Time is extended across interstellar distances by use of a reference frame at rest with respect to the sun."}
+ {:entry "wormhole",
+  :definition
+  "A wormhole is a “detour” in space-time, similar to the detour in the surface of the Earth created by an underground tunnel. In general, the distance through a wormhole can be either shorter or longer than the ordinary distance between its mouths. In Kozuch Theory, all elementary particles are the mouths of extremely narrow wormholes."}]
