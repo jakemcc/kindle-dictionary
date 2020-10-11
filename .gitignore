@@ -14,3 +14,4 @@ pom.xml.asc
 content.html
 cover.html
 .nrepl-port
+output/

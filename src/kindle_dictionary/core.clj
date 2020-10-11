@@ -1,9 +1,15 @@
 (ns kindle-dictionary.core
-  (:require [kindle-dictionary.dictionaries :as dict]
+  (:refer-clojure :exclude [format])
+  (:require [clojure.java.io :as io]
+            [clojure.string :as string]
             [hiccup.core :refer [html]]
-            [hiccup.page :refer [html4 include-css]]
-            [clojure.string :as string])
-  (:refer-clojure :exclude [format]))
+            [hiccup.page :refer [html4]]
+            [kindle-dictionary.dictionaries :as dict])
+  (:import java.awt.image.BufferedImage
+           java.awt.Color
+           java.awt.Font
+           java.awt.Graphics
+           javax.imageio.ImageIO))
 
 (defmulti format type)
 
@@ -28,28 +34,24 @@
     [:idx:orth word]))
 
 (defn define [{:keys [entry definition]}]
-  [:div.definition
-   [:idx:entry {:name "default"}
-    [:dt (format-word entry)]
-    [:dd (format definition)]]])
+  [:idx:entry {:name "default" :scriptable "yes" :spell "yes"}
+   [:dt (format-word entry)]
+   [:dd (format definition)]])
 
 (defn generic-headers
   [body]
   (html4 [:head
-          (include-css "style.css")
-          [:meta {:http-equiv "content-type"
-                  :content "text/html"}]]
+          ;; (include-css "style.css")
+          [:meta {:http-equiv "content-type" :content "text/html"}]]
          body))
 
 (defn generate-word-list
   [words]
-  (generic-headers
-   [:body
-    [:dl
-     (interpose [:hr]
-                (map define (sort-by :entry
-                                     (fn [x y] (.compareToIgnoreCase x y))
-                                     words)))]]))
+  (into [:mbp:framset]
+        (interpose [:hr]
+                   (mapv define (sort-by :entry
+                                         (fn [x y] (.compareToIgnoreCase x y))
+                                         words)))))
 
 (defn cover-page
   [book]
@@ -58,15 +60,52 @@
     [:h1 (:title book)]
     [:h3 "Created by " (:creator book)]]))
 
+(defn opf [book]
+  (with-open [r (io/reader (io/resource "opf-template.opf"))]
+    (-> (slurp r)
+        (string/replace "REPLACE_TITLE" (:title book))
+        (string/replace "REPLACE_CREATOR" (:creator book))
+        (string/replace "REPLACE_LANGUAGE" (:language book "en-us")))))
+
+(defn copyright [book]
+  (generic-headers
+   (if-let [c (:copyright book)]
+     [:body
+      [:p c]]
+     (throw (Exception. "Fill in the copyright")))))
+
+(defn write-cover-image [book]
+  (let [{:keys [title creator]} book
+        img (BufferedImage. 1600 2560 BufferedImage/TYPE_INT_RGB)
+        graphics (.getGraphics img)]
+    (doto graphics
+      (.setColor Color/WHITE)
+      (.fillRect 0 0 1600 2560)
+      (.setColor Color/BLACK)
+      (.setFont (Font. "Arial Black" Font/BOLD 40))
+      (.drawString title 40 60)
+      (.drawString (str "Created by " creator) 40 120))
+    (ImageIO/write img "jpg" (io/file "output" "cover-image.jpg"))))
+
 (defn output-book
   [book]
-  (spit "cover.html" (cover-page book))
-  (spit "content.html" (generate-word-list (:words book))))
+  ;; (write-cover-image book)
+  (spit "output/dict.opf" (opf book))
+  (spit "output/cover.html" (cover-page book))
+  (spit "output/copyright.html" (copyright book))
+  (spit "output/usage.html" (slurp (io/resource "usage.html")))
+  (spit "output/content.html" (let [markup (generate-word-list (:words book))]
+                                (with-open [r (io/reader (io/resource "content-template.xhtml"))]
+                                  (string/replace (slurp r) "REPLACETHIS" (html markup))))))
 
 (defn make-dune-dictionary []
   (spit "content.html" (generate-word-list dict/dune-words)))
 
 (comment
+  (output-book dict/diaspora-dictionary)
+
+  ;; kindlegen example.opf -verbose -C2 -o example-dictionary.mobi
+
   (output-book dict/dune-dictionary)
   )
 

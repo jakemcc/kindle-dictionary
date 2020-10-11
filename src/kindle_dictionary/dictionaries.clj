@@ -1,4 +1,5 @@
-(ns kindle-dictionary.dictionaries)
+(ns kindle-dictionary.dictionaries
+  (:require [clojure.edn :as edn]))
 
 (def dune-words
   (take 5 [
@@ -166,3 +167,10 @@
   {:title "Dune Dictionary"
    :creator "Jake McCrary"
    :words dune-words})
+
+
+(def diaspora-dictionary
+  {:title "A dictionary for Diaspora by Greg Egan"
+   :creator "Jake McCrary"
+   :words (edn/read-string (slurp "diaspora.edn"))
+   :copyright "Content adapted from from Greg Egan's book, Diaspora, and that is entirely owned by him. This dictionary is intended to be a fair use adaptation of the glossary from Diaspora in effort to improve the reading experience of ebook readers"})
