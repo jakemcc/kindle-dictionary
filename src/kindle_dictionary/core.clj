@@ -35,7 +35,7 @@
 
 (defn define [{:keys [entry definition]}]
   [:idx:entry {:name "default" :scriptable "yes" :spell "yes"}
-   [:dt (format-word entry)]
+   [:h5 [:dt (format-word entry)]]
    [:dd (format definition)]])
 
 (defn generic-headers
@@ -87,13 +87,19 @@
       (.drawString (str "Created by " creator) 40 120))
     (ImageIO/write img "jpg" (io/file "output" "cover-image.jpg"))))
 
+(defn usage [book]
+  (if-let [details (:details book)]
+    (-> (slurp (io/resource "usage.html"))
+        (string/replace "REPLACE_DETAILS" details))
+    (throw (Exception. "Missing :details for book"))))
+
 (defn output-book
   [book]
   ;; (write-cover-image book)
   (spit "output/dict.opf" (opf book))
   (spit "output/cover.html" (cover-page book))
   (spit "output/copyright.html" (copyright book))
-  (spit "output/usage.html" (slurp (io/resource "usage.html")))
+  (spit "output/usage.html" (usage book))
   (spit "output/content.html" (let [markup (generate-word-list (:words book))]
                                 (with-open [r (io/reader (io/resource "content-template.xhtml"))]
                                   (string/replace (slurp r) "REPLACETHIS" (html markup))))))

@@ -166,11 +166,13 @@
 (def dune-dictionary
   {:title "Dune Dictionary"
    :creator "Jake McCrary"
-   :words dune-words})
+   :words dune-words
+   :details "The content of this dictionary was sourced from Wikipedia. It was marked up with appropriate metadata to allow it to be used as a Kindle dictionary."})
 
 
 (def diaspora-dictionary
   {:title "A dictionary for Diaspora by Greg Egan"
    :creator "Jake McCrary"
    :words (edn/read-string (slurp "diaspora.edn"))
-   :copyright "Content adapted from from Greg Egan's book, Diaspora, and that is entirely owned by him. This dictionary is intended to be a fair use adaptation of the glossary from Diaspora in effort to improve the reading experience of ebook readers"})
+   :copyright "Content adapted from from Greg Egan's book, Diaspora, and that is entirely owned by him. This dictionary is intended to be a fair use adaptation of the glossary from Diaspora in effort to improve the reading experience of ebook readers"
+   :details "The content of this dictionary was adapted from Greg Egan's Diaspora and given appropriate markup to work as a dictionary for Kindles."})
