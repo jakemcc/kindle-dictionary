@@ -41,7 +41,6 @@
 (defn generic-headers
   [body]
   (html4 [:head
-          ;; (include-css "style.css")
           [:meta {:http-equiv "content-type" :content "text/html"}]]
          body))
 
