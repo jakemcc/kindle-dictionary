@@ -46,7 +46,7 @@
 
 (defn generate-word-list
   [words]
-  (into [:mbp:framset]
+  (into [:mbp:frameset]
         (interpose [:hr]
                    (mapv define (sort-by :entry
                                          (fn [x y] (.compareToIgnoreCase x y))
